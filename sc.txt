@@ -1,0 +1,47 @@
+sudo apt update
+
+sudo apt install -y \
+build-essential \
+gcc \
+g++ \
+make \
+nasm \
+iasl \
+uuid-dev \
+git \
+python3 \
+python3-pip \
+python3-venv \
+libssl-dev \
+libglib2.0-dev \
+libpixman-1-dev \
+qemu-system-x86 \
+qemu-utils \
+ovmf \
+acpica-tools \
+curl \
+wget \
+unzip \
+clang \
+lld
+
+
+cd Desktop/Uefi
+git clone https://github.com/tianocore/edk2.git
+cd edk2
+git submodule update --init --recursive --force
+git submodule update --init --recursive
+git submodule status
+ls MdePkg
+ls MdePkg/Library/MipiSysTLib
+ls OvmfPkg
+ls ShellPkg
+
+make -C BaseTools/Source/C
+
+source edksetup.sh
+
+
+build -a X64 -t GCC5 -p Uefi/Uefi.dsc
+
+

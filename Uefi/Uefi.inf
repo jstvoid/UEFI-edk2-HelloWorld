@@ -1,0 +1,17 @@
+[Defines]
+  INF_VERSION    = 0x0001001A
+  BASE_NAME      = UefiApp
+  FILE_GUID      = 12345678-1234-1234-1234-1234567890ab
+  MODULE_TYPE    = UEFI_APPLICATION
+  ENTRY_POINT    = UefiMain
+
+[Sources]
+  main.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiLib
+  UefiApplicationEntryPoint
+

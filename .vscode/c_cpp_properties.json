@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "edk2",
+            "includePath": [
+                "${workspaceFolder}/**",
+
+                "${workspaceFolder}/MdePkg/Include",
+                "${workspaceFolder}/MdePkg/Include/X64",
+
+                "${workspaceFolder}/MdeModulePkg/Include",
+
+                "${workspaceFolder}/UefiCpuPkg/Include",
+
+                "${workspaceFolder}/BaseTools/Source/C/Include",
+
+                "${workspaceFolder}/Uefi"
+            ],
+            "defines": [
+                "EFIAPI",
+                "MDEPKG_NDEBUG",
+                "EDK2"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}
